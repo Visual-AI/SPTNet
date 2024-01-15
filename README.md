@@ -49,8 +49,13 @@ We also use generic object recognition datasets, including:
 
 * [CIFAR-10/100](https://pytorch.org/vision/stable/datasets.html) and [ImageNet-100/1K](https://image-net.org/download.php)
 
+### Checkpoints
+* [Google Drive](https://drive.google.com/drive/folders/16O0QvsCuVb9Xd-UJNx3J3n6WVH6B_IHw?usp=drive_link)
 
 ### Scripts
+
+**Eval the model**
+
 
 **Train the model**:
 
