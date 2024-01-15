@@ -1,7 +1,5 @@
 import argparse
 import os
-import sys 
-sys.path.append("../..") 
 
 import math
 import numpy as np
@@ -12,7 +10,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from models import vision_transformer as vits
-from methods.vpt.prompters import PadPrompter, PatchPrompter
+from prompters import PadPrompter, PatchPrompter
 
 from data.augmentations import get_transform
 from data.get_datasets import get_datasets, get_class_splits
