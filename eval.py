@@ -21,7 +21,7 @@ from model import DINOHead
 from config import clip_pretrain_path, dino_pretrain_path
 
 
-parser = argparse.ArgumentParser(description='cluster', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser = argparse.ArgumentParser(description='SPTNet', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--batch_size', default=128, type=int)
 parser.add_argument('--num_workers', default=8, type=int)
 parser.add_argument('--eval_funcs', nargs='+', help='Which eval functions to use', default=['v2', 'v2p'])
