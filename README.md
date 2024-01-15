@@ -31,7 +31,7 @@ We recommend setting up a conda environment for the project:
 ```bash
 conda create --name=spt python=3.9
 conda activate spt
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Config
