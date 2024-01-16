@@ -2,8 +2,8 @@
 
 
 <p align="center">
-    <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Wen_Parametric_Classification_for_Generalized_Category_Discovery_A_Baseline_Study_ICCV_2023_paper.html"><img src="https://img.shields.io/badge/ICLR%202024-8A2BE2"></a>
-<!--     <a href="https://arxiv.org/abs/2211.11727"><img src="https://img.shields.io/badge/arXiv-2401.11727-b31b1b"></a> -->
+<!--     <a href=""><img src="https://img.shields.io/badge/ICLR%202024-8A2BE2"></a> -->
+<!--     <a href=""><img src="https://img.shields.io/badge/arXiv-"></a> -->
 </p>
 <p align="center">
 	SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning (ICLR 2024)<br>
@@ -17,7 +17,7 @@
 
 
 
-## Running 🛠️
+## Prerequisite 🛠️
 
 First, you need to clone the SPTNet repository from GitHub. Open your terminal and run the following command:
 
@@ -34,6 +34,7 @@ conda activate spt
 pip install -r requirements.txt
 ```
 
+## Running 🏃
 ### Config
 
 Set paths to datasets and desired log directories in ```config.py```
@@ -41,31 +42,74 @@ Set paths to datasets and desired log directories in ```config.py```
 
 ### Datasets
 
-We use fine-grained benchmarks in this paper, including:
-
-* [The Semantic Shift Benchmark (SSB)](https://github.com/sgvaze/osr_closed_set_all_you_need#ssb) and [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
-
-We also use generic object recognition datasets, including:
+We use generic object recognition datasets, including CIFAR-10/100 and ImageNet-100/1K:
 
 * [CIFAR-10/100](https://pytorch.org/vision/stable/datasets.html) and [ImageNet-100/1K](https://image-net.org/download.php)
 
+We also use fine-grained benchmarks (CUB, Stanford-cars, FGVC-aircraft, Herbarium-19). You can find the datasets in:
+
+* [The Semantic Shift Benchmark (SSB)](https://github.com/sgvaze/osr_closed_set_all_you_need#ssb) and [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
+
 ### Checkpoints
+Download the checkpints for different datasets and put them in the ``checkpoints'' folder.
 * [Google Drive](https://drive.google.com/drive/folders/16O0QvsCuVb9Xd-UJNx3J3n6WVH6B_IHw?usp=drive_link)
 
 ### Scripts
 
 **Eval the model**
-
+```
+CUDA_VISIBLE_DEVICES=0 python eval.py \
+    --dataset_name 'aircraft' \
+    --pretrained_model_path ./checkpoints/fgvcc/dinoB16_best.pt \
+    --prompt_type 'all' \
+    --eval_funcs 'v2' \
+```
+To reproduce all main results in the paper, just change the name (``dataset_name``) and its corresponding path (``pretrained_model_path``) to the pretrained model you downloaded from the above link.
 
 **Train the model**:
 
 ```
-bash scripts/run_${DATASET_NAME}.sh
+CUDA_VISIBLE_DEVICES=0 python train_spt.py \
+    --dataset_name 'aircraft' \
+    --batch_size 128 \
+    --grad_from_block 11 \
+    --epochs 1000 \
+    --num_workers 8 \
+    --use_ssb_splits \
+    --sup_weight 0.35 \
+    --weight_decay 5e-4 \
+    --transform 'imagenet' \
+    --lr 1 \
+    --lr2 0.05 \
+    --prompt_size 1 \
+    --freq_rep_learn 20 \
+    --pretrained_model_path ${YOUR_OWN_PRETRAINED_PATH} \
+    --prompt_type 'all' \
+    --eval_funcs 'v2' \
+    --warmup_teacher_temp 0.07 \
+    --teacher_temp 0.04 \
+    --warmup_teacher_temp_epochs 10 \
+    --memax_weight 1 \
+    --model_path ${YOUR_OWN_SAVE_DIR}
 ```
+Just be aware to change the name (``dataset_name``) and its corresponding path (``pretrained_model_path``) to the pretrained model you downloaded from the above link. Our SPTNet method is adaptable to various pretrained models, allowing for the modification of the architecture by changing the ``pretrained_model_path``. This feature enables quick adoption of the state-of-the-art (SOTA) method. Our default settings utilize the SimGCD method, which is based on the DINO pretrained model.
 
 
 ## Results
-Our results:
+Generic results:
+|              | All  | Old  | New  |
+|--------------|------|------|------|
+| CIFAR-10     | 97.3 | 95.0 | 98.6 |
+| CIFAR-100    | 81.3 | 84.3 | 75.6 |
+| ImageNet-100 | 85.4 | 93.2 | 81.4 |
+
+Fine-grained results:
+|               | All  | Old  | New  |
+|---------------|------|------|------|
+| CUB           | 65.8 | 68.8 | 65.1 |
+| Stanford Cars | 59.0 | 79.2 | 49.3 |
+| FGVC-Aircraft | 59.3 | 61.8 | 58.1 |
+| Herbarium19   | 43.4 | 58.7 | 35.2 |
 
 
 
@@ -74,9 +118,14 @@ Our results:
 If you find this repo useful for your research, please consider citing our paper:
 
 ```
-
+@inproceedings{wang2024sptnet,
+    author    = {Wang, Hongjun and Vaze, Sagar and Han, Kai},
+    title     = {Parametric Classification for Generalized Category Discovery: A Baseline Study},
+    booktitle = {International Conference on Learning Representations (ICLR)},
+    year      = {2024}
+}
 ```
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
