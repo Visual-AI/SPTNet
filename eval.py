@@ -1,5 +1,7 @@
 import argparse
 import os
+import sys 
+sys.path.append("../..") 
 
 import math
 import numpy as np
@@ -10,7 +12,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from models import vision_transformer as vits
-from prompters import PadPrompter, PatchPrompter
+from methods.vpt.prompters import PadPrompter, PatchPrompter
 
 from data.augmentations import get_transform
 from data.get_datasets import get_datasets, get_class_splits
@@ -21,7 +23,7 @@ from model import DINOHead
 from config import clip_pretrain_path, dino_pretrain_path
 
 
-parser = argparse.ArgumentParser(description='SPTNet', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser = argparse.ArgumentParser(description='cluster', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 parser.add_argument('--batch_size', default=128, type=int)
 parser.add_argument('--num_workers', default=8, type=int)
 parser.add_argument('--eval_funcs', nargs='+', help='Which eval functions to use', default=['v2', 'v2p'])
@@ -30,11 +32,6 @@ parser.add_argument('--dataset_name', type=str, default='scars', help='options: 
 parser.add_argument('--use_ssb_splits', action='store_true', default=True)
 
 parser.add_argument('--transform', type=str, default='imagenet')
-parser.add_argument('--model', type=str, default='dino')
-parser.add_argument('--model_path', type=str)
-
-parser.add_argument('--freq_rep_learn', type=int)
-parser.add_argument('--prompt_size', type=int)
 parser.add_argument('--prompt_type', type=str, default='all')
 parser.add_argument('--pretrained_model_path', type=str)
 
@@ -70,9 +67,6 @@ def test(model, test_loader, save_name, args):
 
 
 if __name__ == "__main__":
-
-    if not os.path.exists(args.model_path):
-        os.makedirs(args.model_path)
 
     print(f'Using evaluation function {args.eval_funcs[0]} to print results')
     
