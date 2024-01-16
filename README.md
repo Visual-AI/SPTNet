@@ -13,7 +13,7 @@
   <a href="https://www.kaihan.org/">Kai Han</a>.
 </p>
 
-![teaser](assets/teaser.jpg)
+![teaser](assets/teaser.png)
 
 
 
