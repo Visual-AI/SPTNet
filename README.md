@@ -1,4 +1,4 @@
-# SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning
+# SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning (ICLR 2024)
 
 
 <p align="center">
@@ -6,7 +6,7 @@
 <!--     <a href=""><img src="https://img.shields.io/badge/arXiv-"></a> -->
 </p>
 <p align="center">
-	SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning (ICLR 2024)<br>
+	SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning <br>
   By
   <a href="https://whj363636.github.io/">Hongjun Wang</a>, 
   <a href="https://sgvaze.github.io/">Sagar Vaze</a>, and 
