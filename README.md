@@ -120,7 +120,7 @@ If you find this repo useful for your research, please consider citing our paper
 ```
 @inproceedings{wang2024sptnet,
     author    = {Wang, Hongjun and Vaze, Sagar and Han, Kai},
-    title     = {Parametric Classification for Generalized Category Discovery: A Baseline Study},
+    title     = {SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning},
     booktitle = {International Conference on Learning Representations (ICLR)},
     year      = {2024}
 }
