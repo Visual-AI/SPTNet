@@ -15,9 +15,8 @@ from prompters import PadPrompter, PatchPrompter
 
 from data.augmentations import get_transform
 from data.get_datasets import get_datasets, get_class_splits
-from methods.vpt.utils import cosine_lr
 
-from project_utils.general_utils import str2bool, get_params_groups, finetune_params, freeze, unfreeze
+from util.general_utils import str2bool, get_params_groups, finetune_params, freeze, unfreeze, cosine_lr
 from util.cluster_and_log_utils import log_accs_from_preds
 from model import DINOHead, info_nce_logits, SupConLoss, DistillLoss, ContrastiveLearningViewGenerator
 
