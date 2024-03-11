@@ -153,6 +153,19 @@ def get_params_groups(model):
     return [{'params': regularized}, {'params': not_regularized, 'weight_decay': 0.}]
 
 
+def freeze(backbone):
+    backbone.eval()
+    for m in backbone.parameters():
+        m.requires_grad = False
+    return backbone
+
+def unfreeze(backbone):
+    backbone.train()
+    for m in backbone.parameters():
+        m.requires_grad = True
+    return backbone
+    
+
 def finetune_params(backbone, args):
     for m in backbone.parameters():
         m.requires_grad = False
