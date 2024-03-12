@@ -60,7 +60,7 @@ Download the checkpints for different datasets and put them in the ``checkpoints
 ```
 CUDA_VISIBLE_DEVICES=0 python eval.py \
     --dataset_name 'aircraft' \
-    --pretrained_model_path ./checkpoints/fgvcc/dinoB16_best.pt \
+    --pretrained_model_path ./checkpoints/fgvc/dinoB16_best.pt \
     --prompt_type 'all' \
     --eval_funcs 'v2' \
 ```
@@ -92,7 +92,7 @@ CUDA_VISIBLE_DEVICES=0 python train_spt.py \
     --memax_weight 1 \
     --model_path ${YOUR_OWN_SAVE_DIR}
 ```
-Just be aware to change the name (``dataset_name``) and its corresponding path (``pretrained_model_path``) to the pretrained model you downloaded from the above link. Our SPTNet method is adaptable to various pretrained models, allowing for the modification of the architecture by changing the ``pretrained_model_path``. This feature enables quick adoption of the state-of-the-art (SOTA) method. Our default settings utilize the SimGCD method, which is based on the DINO pretrained model.
+Just be aware to change the name (``dataset_name``) and its corresponding path (``pretrained_model_path``) to the pretrained model。 Our SPTNet method is adaptable to various pretrained models, allowing for the modification of the architecture by changing the ``pretrained_model_path``. This feature enables quick adoption of the state-of-the-art (SOTA) method. Our default settings utilize the SimGCD method.
 
 
 ## Results
