@@ -15,6 +15,10 @@
 
 ![teaser](assets/teaser.png)
 
+ [[`Paper`]](https://openreview.net/forum?id=3QLkwU40EE&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2024%2FConference%2FAuthors%23your-submissions))
+ [[`Project Page`]](https://visual-ai.github.io/sptnet/)
+ [[`Citation`]](#jump)
+
 
 
 ## Prerequisite 🛠️
@@ -22,7 +26,7 @@
 First, you need to clone the SPTNet repository from GitHub. Open your terminal and run the following command:
 
 ```
-git clone https://github.com/whj363636/SPTNet.git
+git clone https://github.com/Visual-AI/SPTNet.git
 cd SPTNet
 ```
 
@@ -114,7 +118,7 @@ Fine-grained results:
 
 
 ## Citing this work
-
+<span id="jump"></span>
 If you find this repo useful for your research, please consider citing our paper:
 
 ```
