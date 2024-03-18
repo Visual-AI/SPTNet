@@ -129,7 +129,3 @@ If you find this repo useful for your research, please consider citing our paper
     year      = {2024}
 }
 ```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
