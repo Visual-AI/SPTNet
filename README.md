@@ -2,8 +2,9 @@
 
 
 <p align="center">
-<!--     <a href=""><img src="https://img.shields.io/badge/ICLR%202024-8A2BE2"></a> -->
-<!--     <a href=""><img src="https://img.shields.io/badge/arXiv-"></a> -->
+    <a href="https://arxiv.org/abs/2403.13684"><img src="https://img.shields.io/badge/arXiv-2403.13684-b31b1b"></a>
+    <a href="https://visual-ai.github.io/sptnet/"><img src="https://img.shields.io/badge/Project-Website-blue"></a>
+    <a href="#jump"><img src="https://img.shields.io/badge/Citation-8A2BE2"></a>
 </p>
 <p align="center">
 	SPTNet: An Efficient Alternative Framework for Generalized Category Discovery with Spatial Prompt Tuning <br>
@@ -14,10 +15,6 @@
 </p>
 
 ![teaser](assets/teaser.png)
-
- [[`Paper`]](https://openreview.net/forum?id=3QLkwU40EE&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICLR.cc%2F2024%2FConference%2FAuthors%23your-submissions))
- [[`Project Page`]](https://visual-ai.github.io/sptnet/)
- [[`Citation`]](#jump)
 
 
 
