@@ -57,7 +57,7 @@ opencv-python==4.8.1.78
 packaging @ file:///croot/packaging_1693575174725/work
 pandas @ file:///croot/pandas_1692289311655/work
 partd @ file:///croot/partd_1693937863478/work
-Pillow==9.4.0
+Pillow==10.3.0
 ply==3.11
 protobuf==3.20.3
 pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
