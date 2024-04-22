@@ -52,7 +52,7 @@ We also use fine-grained benchmarks (CUB, Stanford-cars, FGVC-aircraft, Herbariu
 * [The Semantic Shift Benchmark (SSB)](https://github.com/sgvaze/osr_closed_set_all_you_need#ssb) and [Herbarium19](https://www.kaggle.com/c/herbarium-2019-fgvc6)
 
 ### Checkpoints
-Download the checkpints for different datasets and put them in the ``checkpoints'' folder.
+Download the checkpints of **SPTNet** for different datasets and put them in the ``checkpoints'' folder (**only used during evaluation**).
 * [Google Drive](https://drive.google.com/drive/folders/16O0QvsCuVb9Xd-UJNx3J3n6WVH6B_IHw?usp=drive_link)
 
 ### Scripts
