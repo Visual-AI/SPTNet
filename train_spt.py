@@ -310,6 +310,6 @@ if __name__ == "__main__":
     
         if epoch % args.eval_freq == 0:
             with torch.no_grad():
-                # Testing on unlabelled examples in domain A
-                all_acc, old_acc, new_acc = test(model, test_loader_unlabelled, epoch=epoch, save_name='Train ACC Unlabelled', args=args)
+                # Testing on labelled examples
+                all_acc, old_acc, new_acc = test(model, test_loader_labelled, epoch=epoch, save_name='Train ACC Unlabelled', args=args)
                 torch.save(model.state_dict(), os.path.join(args.model_path, 'dinoB16_best_trainul.pt'))
