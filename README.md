@@ -20,6 +20,11 @@
 
 [05.2024] We update the results of SPTNet witho DINOv2 on CUB, please check our latest version in [Arxiv](https://arxiv.org/abs/2403.13684) 
 
+|               | All  | Old  | New  |
+|---------------|------|------|------|
+| CUB (DINO)           | 65.8 | 68.8 | 65.1 |
+| CUB (DINOv2)         | 76.3 | 79.5 | 74.6 |
+
 ## Prerequisite 🛠️
 
 First, you need to clone the SPTNet repository from GitHub. Open your terminal and run the following command:
