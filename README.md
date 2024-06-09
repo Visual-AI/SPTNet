@@ -16,7 +16,9 @@
 
 ![teaser](assets/teaser.png)
 
+## Update
 
+[05.2024] We update the results of SPTNet witho DINOv2 on CUB, please check our latest version in [Arxiv](https://arxiv.org/abs/2403.13684) 
 
 ## Prerequisite 🛠️
 
