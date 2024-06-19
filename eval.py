@@ -117,7 +117,7 @@ if __name__ == "__main__":
     model.eval()
     model.cuda()
 
-    state_dict = torch.load(args.pretrained_weights, map_location="cpu")
+    state_dict = torch.load(args.pretrained_model_path, map_location="cpu")
     model.load_state_dict(state_dict)
 
     # DATASETS
