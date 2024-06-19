@@ -69,7 +69,7 @@ Download the checkpints of **SPTNet** for different datasets and put them in the
 CUDA_VISIBLE_DEVICES=0 python eval.py \
     --dataset_name 'aircraft' \
     --pretrained_model_path ./checkpoints/fgvc/dinoB16_best.pt \
-    --prompt_type 'all' \ # shared for 'cifar10' and 'cifar100'
+    --prompt_type 'all' \ # switch to 'patch' for 'cifar10' and 'cifar100'
     --eval_funcs 'v2' \
 ```
 To reproduce all main results in the paper, just change the name (``dataset_name``) and its corresponding path (``pretrained_model_path``) to the pretrained model you downloaded from the above link.
