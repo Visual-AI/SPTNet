@@ -135,5 +135,5 @@ if __name__ == "__main__":
     # ----------------------
     # EVAL
     # ----------------------
-    all_acc, old_acc, new_acc = test(model, test_loader_unlabelled, save_name='Train ACC Unlabelled', args=args)
+    all_acc, old_acc, new_acc = test(model, test_loader_unlabelled, save_name='Eval ACC Unlabelled', args=args)
     print('Best Accuracies: All {:.4f} | Old {:.4f} | New {:.4f}'.format(all_acc, old_acc, new_acc))
