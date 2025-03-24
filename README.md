@@ -4,6 +4,7 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2403.13684"><img src="https://img.shields.io/badge/arXiv-2403.13684-b31b1b"></a>
     <a href="https://visual-ai.github.io/sptnet/"><img src="https://img.shields.io/badge/Project-Website-blue"></a>
+    <a href="https://huggingface.co/whj363636/SPTNet"><img src="https://img.shields.io/static/v1?label=HuggingFace&message=models&color=yellow"></a>
     <a href="#jump"><img src="https://img.shields.io/badge/Citation-8A2BE2"></a>
 </p>
 <p align="center">
