@@ -103,6 +103,19 @@ CUDA_VISIBLE_DEVICES=0 python train_spt.py \
 ```
 Just be aware to change the name (``dataset_name``) and its corresponding path (``pretrained_model_path``) to the pretrained model. Our SPTNet method is adaptable to various pretrained models, allowing for the modification of the architecture by changing the ``pretrained_model_path``. This feature enables quick adoption of the state-of-the-art (SOTA) method. Our default settings utilize the SimGCD method.
 
+## Hyper-parameters
+If you would like to strictly reproduce the results in our paper (or even better), please use these configurations. Don't worry, only significant divergence will lead to a performance gap:). 
+|              | lr1  | lr2  |memax|
+|--------------|------|------|------
+| CIFAR-10     | 1    | 3e-3 | 1   |
+| CIFAR-100    | 5    | 3e-3 | 1   |
+| ImageNet-100 | 5    | 3e-3 | 1   |
+| CUB          | 25   | 5e-2 | 2   |
+| SCARS        | 10   | 5e-2 | 1   |
+| Aircraft     | 1    | 5e-2 | 1   |
+| Herbarium19  | 0.5  | 1e-2 | 1   |
+
+
 
 ## Results
 Generic results:
